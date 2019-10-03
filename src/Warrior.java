@@ -1,5 +1,5 @@
 public class Warrior implements ToAttack{
-    private int _hp = 998;          //почему-то начальный уровень здоровья тут 1002, надо найти где что-то пошло не так
+    private int _hp = 1000;          
     private int _attack = 10;
     private int _armor = 3;
 
