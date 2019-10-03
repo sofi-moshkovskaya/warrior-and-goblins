@@ -11,7 +11,9 @@ public class Play {
         while (warrior.get_hp()>0)
         {
             Goblin goblin=new Goblin();
-
+            killedgobllins+=1;
+            levelcount+=1;
+            
             while (goblin.get_hp()>0 && warrior.get_hp()>0)
             {
                if(stepcount%5==0)
@@ -22,17 +24,13 @@ public class Play {
                 stepcount+=1;
                 LevelInfo(warrior,goblin);
             }
-
-            killedgobllins+=1;
-            levelcount+=1;
-
         }
 
 
         System.out.println("____________________________"
                           +"\n         GAME OVER"
                           +"\n‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾"
-                +"\nУбито гоблинов -- "+ killedgobllins
+                +"\nУбито гоблинов -- "+ (killedgobllins-1)
                 +"\nПройденно уровней -- "+(levelcount-1)
                 +"\nСделанно ходов -- "+(stepcount-1));        ;
     }
